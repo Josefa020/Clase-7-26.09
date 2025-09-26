@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejemplo</title>
+  </head>
+  <body>
+   
+   <table id="popote"></table>
+
+    <script>
+
+
+      const tenis = [
+        {name: "Margaret Court", titles: 24},
+        {name: "Serena Williams", titles: 23},
+        {name: "Steffi Graf" , titles: 22},
+        {name: "Helen Wills" , titles: 19},
+        {name: "Chris Evert" , titles: 18},
+
+       ]
+
+      const parrafos = document.querySelector("#popote");
+        tenis.forEach((v) => {
+          
+      
+         parrafos.innerHTML += `
+         <tr>
+         <td> ${v.name}</td>
+         </td>
+         <div style="width:${v.titles*15}px;background:red">.</div>
+         </td>
+         </tr>`;
+
+       });
+
+      function emojis(n){
+        var imprime = ""
+        for(var x = 0; x < n; x++){
+          imprime += "🏆"
+        }
+        return imprime;
+      }
+
+    </script>
+  </body>
+</html>
